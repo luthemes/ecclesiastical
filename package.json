@@ -1,6 +1,6 @@
 {
   "name": "ecclesiastical",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Ecclesiastical is a starter theme for ClassicPress, built on the Backdrop framework.",
   "main": "resources/js/app.js",
   "repository": {
