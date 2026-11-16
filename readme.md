@@ -44,6 +44,7 @@ All resources in the theme must be GPL compatible. The credits for each one are 
 - [Backdrop framework](https://github.com/backdrop-dev/framework) (GPLv2 or later)
 - [Font Awesome](https://fontawesome.com/) 5.15.4, loaded from cdnjs (SIL OFL 1.1 and MIT)
 - Header image (`public/images/header-image.jpg`): church auditorium photo by jgonzales2401, CC0, from [wordpress.org/photos](https://wordpress.org/photos/photo/9766dde15d/)
+- Screenshot (`screenshot.png`): captured from the theme with sample text written for it; shows the header image credited above (GPLv2 or later)
 - [Merriweather](https://fonts.google.com/specimen/Merriweather) and [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) (SIL Open Font License)
 
 Images need a GPL-compatible license too, such as CC0 from [wordpress.org/photos](https://wordpress.org/photos/) or Pexels CC0. Photos from Unsplash are not accepted by the WordPress.org theme directory. List the source and license of every image, including `screenshot.png`, in `readme.txt` under Resources.
