@@ -14,6 +14,7 @@
 - Rename markup, styles and menu script to BEM naming, like Amicable (`site-header__container`, `entry__title`, `menu__items`, `site-layout--left-sidebar`)
 - Use the Backdrop pagination component (`pagination__items`, `pagination__anchor--current`) instead of `the_posts_pagination()`
 - Fix the primary menu id typo (`primaire`) and style the menu with the framework's `menu__item` classes
+- Update the readme resources and requirements notes
 - Don't add `html5` theme support on ClassicPress 2.0 and higher, which deprecates it
 - Fix a warning in the Plugins tab when the plugin API request fails
 - Add tests that run the Theme Unit Test data against a ClassicPress site

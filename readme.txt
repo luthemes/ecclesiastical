@@ -1,11 +1,11 @@
 Ecclesiastical ClassicPress Theme
 ================================================================================================
 Contributor: benlumia007
-Tags: custom-background, custom-header, right-sidebar
+Tags: blog, custom-background, custom-header, custom-menu, featured-images, right-sidebar, left-sidebar, threaded-comments, translation-ready
 Requires at least: 4.9
 Requires PHP: 7.4
 Requires CP: 2.0
-Stable tag: 0.2.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,7 +49,7 @@ Not Available At the Moment
 
 
 == Resources ==
-Font Awesome ( Version: 5.0 )
+Font Awesome ( Version: 5.15.4, loaded from cdnjs )
 Created By: Fonticons, Inc
 License: SIL OFL 1.1 and MIT License
 Source: (https://fontawesome.com/)
@@ -67,3 +67,7 @@ Source: https://fonts.google.com/specimen/Fira+Sans
 Benjamin Lu (https://github.com/benlumia007/)
 Backdrop (https://github.com/backdrop-dev/framework)
 License: GPLv2 or Higher
+
+Vite and Sass ( build tools only, not included in the theme )
+License: MIT
+Source: https://vite.dev/
