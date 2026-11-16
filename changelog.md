@@ -8,6 +8,7 @@
 - Add customizer options for the feature image size and the footer credit text
 - Image sizes and theme mod defaults moved to `config/`
 - Build assets with Vite instead of Laravel Mix; assets are loaded through the Vite manifest
+- Show user, calendar and comment icons in the post metadata, with spacing between items
 - Remove list bullets from the header menu, including the page-list fallback
 - Style the secondary menu as a centered row of links in the footer
 - Default the global layout to a right sidebar, and align the primary menu to the right of the header
