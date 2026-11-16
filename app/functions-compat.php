@@ -58,7 +58,7 @@ function ecclesiastical_switch_theme( $old_name ) {
 
 	switch_theme( $old_name ? $old_name : WP_DEFAULT_THEME );
 
-	unset( $_GET['activated'] );
+	unset( $_GET['activated'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Only removes a core flag.
 
 	add_action( 'admin_notices', 'ecclesiastical_upgrade_notice' );
 }
