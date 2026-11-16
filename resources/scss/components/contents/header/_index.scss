@@ -8,13 +8,13 @@
 //
 
 .site-header {
-    .branding-navigation {
+    .site-header__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 1.125rem;
 
-        .site-branding {    
-            .site-title {
+        .site-header__branding {    
+            .site-header__title {
                 margin: 0;
                 padding: 0;
 
@@ -23,7 +23,7 @@
                 }
             }
 
-            .site-description {
+            .site-header__description {
                 margin: 0.5rem 0 0 0 ;
                 padding: 0;
             }

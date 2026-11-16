@@ -22,10 +22,10 @@
 <div id="container" class="site-container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'ecclesiastical' ) ?></a>
 	<header id="masthead" class="site-header">
-		<div class="branding-navigation">
-			<div class="site-branding">
-				<?php Backdrop\Site\display_title( [ 'class' => 'site-title' ] ); ?>
-				<?php Backdrop\Site\display_description( [ 'class' => 'site-description' ] ); ?>
+		<div class="site-header__container">
+			<div class="site-header__branding">
+				<?php Backdrop\Site\display_title( [ 'class' => 'site-header__title' ] ); ?>
+				<?php Backdrop\Site\display_description( [ 'class' => 'site-header__description' ] ); ?>
 			</div>
 			<?php Ecclesiastical\display_menu( 'primary' ); ?>
 		</div>

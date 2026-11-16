@@ -19,14 +19,12 @@ a {
     }
 }
 
-.grid {
+.archive__grid {
     display: grid;
     grid-gap: 1.125rem;
     margin: 0;
     padding: 0;
 
-    &.has-3-columns {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
 }
 

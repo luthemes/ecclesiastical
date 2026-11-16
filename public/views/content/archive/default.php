@@ -9,20 +9,20 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry__header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-			<?php printf( '<span class="sticky-post">%1$s</span>', esc_html__( 'Featured', 'ecclesiastical' ) ); ?>
+			<?php printf( '<span class="entry__sticky">%1$s</span>', esc_html__( 'Featured', 'ecclesiastical' ) ); ?>
 		<?php } ?>
 		<?php Backdrop\Post\display_title( [
-			'class' => 'entry-title text-medium'
+			'class' => 'entry__title text-medium'
 		] ); ?>
-		<div class="entry-metadata">
+		<div class="entry__metadata">
 			<?php Backdrop\Post\display_author( [ 'text' => '<i class="fa fa-user"></i> %s' ] ); ?>
 			<?php Backdrop\Post\display_date( [ 'text' => '<i class="fa fa-calendar-alt"></i> %s' ] ); ?>
 			<?php Backdrop\Post\display_comments_link( [ 'text' => '<i class="fa fa-comment"></i> %s' ] ); ?>
 		</div>
 	</header>
-	<div class="entry-excerpt">
+	<div class="entry__excerpt">
 		<?php the_excerpt(); ?>
 	</div>
 </article>

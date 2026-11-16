@@ -1,17 +1,17 @@
-.widget-area .search-form:before,
-.widget-area .search-form:after {
+.site-aside .search-form:before,
+.site-aside .search-form:after {
     clear: both;
     content: "";
     display: table;
 }
 
-.widget-area .search-form {
+.site-aside .search-form {
     padding: 0.938em;
     background: #555;
     max-width: 100%;
 }
 
-.widget-area .search-field {
+.site-aside .search-field {
     border: none;
     float: left;
     font-family: 'Merriweather', serif;
@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.widget-area .search-submit {
+.site-aside .search-submit {
     border: none;
     background: #d88f3c;
     color: #ffffff;
@@ -33,7 +33,7 @@
     width: 30%;
 }
 
-.widget-area .widget {
+.site-aside .widget {
 	line-height: 1.8em;
     margin-bottom: 2.250em;
     font-size: 0.875em;
@@ -85,22 +85,22 @@
     margin-bottom: 1.125em;
 }
 
-.widget-area table {
+.site-aside table {
     border-collapse: collapse;
     width: 100%;
 }
 
-.widget-area tr:nth-of-type(odd) {
+.site-aside tr:nth-of-type(odd) {
     background: #eeeeee;
 }
 
-.widget-area th {
+.site-aside th {
     background: #333333;
     color: #ffffff;
     font-weight: 700;
 }
 
-.widget-area th, td {
+.site-aside th, td {
     border: 0.063em solid #cccccc;
     text-align: left;
     padding: 0.438em;

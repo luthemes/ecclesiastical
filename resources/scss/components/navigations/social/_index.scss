@@ -7,17 +7,16 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-.site-social {
+.social-menu {
     padding: 0.5rem;
 
-    .menu-social {
-        ul {
+    .menu__items {
             text-align: center;
             list-style: none;
             margin: 0;
             padding: 0;
 
-            li {
+            .menu__item {
                 position: relative;
                 display:  inline-block;
 
@@ -58,7 +57,7 @@
                 a[href*="wordpress.org"]::before { content: '\f19a'; }
 
             }
-        }
+        
     }
     
 }

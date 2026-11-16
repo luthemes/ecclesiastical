@@ -10,19 +10,19 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php Backdrop\Post\display_title( [ 'class' => 'entry-title' ] ); ?>
-		<div class="entry-metadata">
+	<header class="entry__header">
+		<?php Backdrop\Post\display_title( [ 'class' => 'entry__title' ] ); ?>
+		<div class="entry__metadata">
 			<?php Backdrop\Post\display_author( [ 'text' => '<i class="fa fa-user"></i> %s' ] ); ?>
 			<?php Backdrop\Post\display_date( [ 'text' => '<i class="fa fa-calendar-alt"></i> %s' ] ); ?>
 			<?php Backdrop\Post\display_comments_link( [ 'text' => '<i class="fa fa-comment"></i> %s' ] ); ?>
 		</div>
 	</header>
-	<div class="entry-content">
+	<div class="entry__content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( [
-				'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'ecclesiastical' ),
+				'before'      => '<div class="entry__page-links">' . esc_html__( 'Pages:', 'ecclesiastical' ),
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
@@ -31,8 +31,8 @@
 			] );
 			?>
 	</div>
-	<div class="entry-taxonomies">
-		<?php Backdrop\Post\display_terms( [ 'taxonomy' => 'category', 'class' => 'entry-categories' ] ); ?>
-		<?php Backdrop\Post\display_terms( [ 'taxonomy' => 'post_tag', 'class' => 'entry-tags' ] ); ?>
+	<div class="entry__taxonomies">
+		<?php Backdrop\Post\display_terms( [ 'taxonomy' => 'category', 'class' => 'entry__categories' ] ); ?>
+		<?php Backdrop\Post\display_terms( [ 'taxonomy' => 'post_tag', 'class' => 'entry__tags' ] ); ?>
 	</div>
 </article>

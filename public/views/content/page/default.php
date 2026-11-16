@@ -10,15 +10,15 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php Backdrop\Post\display_title( [ 'class' => 'entry-title' ] ); ?>
+	<header class="entry__header">
+		<?php Backdrop\Post\display_title( [ 'class' => 'entry__title' ] ); ?>
 	</header>
-	<div class="entry-content">
+	<div class="entry__content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'ecclesiastical' ),
+					'before'      => '<div class="entry__page-links">' . esc_html__( 'Pages:', 'ecclesiastical' ),
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',

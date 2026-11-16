@@ -1,9 +1,9 @@
-.comments-header {
+.comments__header {
     text-align: center;
 }
 
 .comments-area {
-    .comment-list {
+    .comments__list {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -16,18 +16,18 @@
         }
 
         .bypostauthor > {
-            .comment-body {
+            .comment__body {
                 background: #eeeeee;
                 padding: 1.125rem;
             }
         }
 
 
-        .comment-meta {
+        .comment__meta {
             border-bottom: 0.063rem solid #cccccc;
             padding-bottom: 0.5rem;
 
-            .comment-author {
+            .comment__author {
                 .avatar {
                     border: 0.25rem solid #cccccc;
                     border-radius: 50%;
@@ -45,7 +45,7 @@
 
                 }
 
-                .comment-metadata {
+                .comment__metadata {
                     font-size: 0.875rem;
                     padding-left: 4.5rem;
                     margin-top: -0.5rem;
