@@ -38,6 +38,15 @@ php tests/admin-check.php /tmp/cp-site
 ## Documentations
 Coming Soon.
 
+## Resources
+All resources in the theme must be GPL compatible. The credits for each one are in `readme.txt`.
+
+- [Backdrop framework](https://github.com/backdrop-dev/framework) (GPLv2 or later)
+- [Font Awesome](https://fontawesome.com/) 5.15.4, loaded from cdnjs (SIL OFL 1.1 and MIT)
+- [Merriweather](https://fonts.google.com/specimen/Merriweather) and [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) (SIL Open Font License)
+
+Images need a GPL-compatible license too, such as CC0 from [wordpress.org/photos](https://wordpress.org/photos/) or Pexels CC0. Photos from Unsplash are not accepted by the WordPress.org theme directory. List the source and license of `public/images/header-image.jpg` and `screenshot.png` in `readme.txt` under Resources.
+
 ## Copyright and License
 Ecclesiastical is licensed under the GNU GPL, v2 or later
 
