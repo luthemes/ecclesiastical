@@ -1,6 +1,6 @@
 <?php
 /**
- * Service provider ( app/Admin/Provider.php )
+ * Theme provider ( app/Provider.php )
  *
  * @package   Ecclesiastical
  * @author    Benjamin Lu ( benlumia007@gmail.com )
@@ -9,27 +9,22 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 
-namespace Ecclesiastical\Admin;
+namespace Ecclesiastical;
 
 use Backdrop\Core\ServiceProvider;
+use Ecclesiastical\Tools\Config;
 
 class Provider extends ServiceProvider {
 
 	/**
-	 * Binds a single instance of the component to the container.
+	 * Binds a single instance of the theme mod defaults.
 	 *
 	 * @return void
 	 */
 	public function register(): void {
-		$this->app->singleton( Component::class );
-	}
 
-	/**
-	 * Boots the component.
-	 *
-	 * @return void
-	 */
-	public function boot(): void {
-		$this->app->resolve( Component::class )->boot();
+		$this->app->singleton( 'ecclesiastical/mods', function() {
+			return Config::get( '_settings-mods' );
+		} );
 	}
 }

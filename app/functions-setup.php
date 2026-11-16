@@ -68,19 +68,12 @@ add_action( 'after_setup_theme', function() {
 		) );
 
 		/**
-		 * By add_image_size( 'ecclesiastical-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
+		 * Image sizes are defined in `config/image-sizes.php`. The small size is used for content in the home for blogs, the
+		 * medium size for content that has sidebars and the large size for content that has no sidebars.
 		 */
-		add_image_size( 'ecclesiastical-small-thumbnails', 324, 324, true );
-
-		/**
-		 * By add_image_size( 'ecclesiastical-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
-		 */
-		add_image_size( 'ecclesiastical-medium-thumbnails', 810, 396, true );
-
-		/**
-		 * By add_image_size( 'ecclesiastical-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
-		 */
-		add_image_size( 'ecclesiastical-large-thumbnails', 1170, 614, true );
+		foreach ( Tools\Config::get( 'image-sizes' ) as $name => $size ) {
+			add_image_size( $name, $size['width'], $size['height'], ! empty( $size['crop'] ) );
+		}
 
 		/**
 		 * Load theme translation.

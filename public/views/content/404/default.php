@@ -8,16 +8,14 @@
  * @author    Benjamin Lu ( https://getbenonit.com )
  */
 ?>
+<?php $error = new Ecclesiastical\Template\ErrorPage(); ?>
+<?php $error->setup(); ?>
 <article id="post-0" <?php post_class( 'post' ); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php esc_html_e( 'Page Not Found', 'ecclesiastical' ); ?></h1>
+		<h1 class="entry-title"><?php $error->displayTitle(); ?></h1>
 	</header>
 	<div class="entry-content">
-		<p>
-			<?php
-				printf( esc_html__( "Just kidding! It looks like you have stumbled upon a page that doesn't exist, so that means I probably broke something. To find what you are looking for, check out the most recent articles below or try a search: ", 'ecclesiastical' ) );
-			?>
-		</p>
-		<?php get_search_form(); ?>
+		<?php $error->displayContent(); ?>
 	</div>
 </article>
+<?php $error->reset(); ?>

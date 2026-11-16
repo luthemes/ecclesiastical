@@ -20,9 +20,11 @@ $ecclesiastical = \Backdrop\booted() ? \Backdrop\app() : new \Backdrop\Core\Appl
 /**
  * Register Service Provider with the Framework
  */
-$ecclesiastical->provider( Ecclesiastical\Admin\Provider::class );
-$ecclesiastical->provider( Ecclesiastical\Customize\Layouts\Provider::class );
+$ecclesiastical->provider( Ecclesiastical\Provider::class );
+$ecclesiastical->provider( Ecclesiastical\CleanCP\Provider::class );
+$ecclesiastical->provider( Ecclesiastical\Customize\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Menu\Provider::class );
+$ecclesiastical->provider( Ecclesiastical\Settings\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Sidebar\Provider::class );
 
 /**
