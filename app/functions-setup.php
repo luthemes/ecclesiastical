@@ -46,16 +46,19 @@ add_action( 'after_setup_theme', function() {
 		add_theme_support( 'automatic-feed-links' );
 
 		/**
-		 * By adding add_theme_support( 'html5', arrayy() );, this feature when enabled allows the user use of HTML5 markup for
-		 * comment list, comment forms, search forms, galleries, and captions.
+		 * By adding add_theme_support( 'html5', array() );, this feature when enabled allows the user use of HTML5 markup for
+		 * comment list, comment forms, search forms, galleries, and captions. ClassicPress 2.0 and higher uses HTML5 by default
+		 * and deprecates this argument, so it is only added on other platforms.
 		 */
-		add_theme_support( 'html5', array(
-			'comment-list',
-			'comment-form',
-			'search-form',
-			'gallery',
-			'caption',
-		) );
+		if ( ! \Backdrop\is_classicpress() ) {
+			add_theme_support( 'html5', array(
+				'comment-list',
+				'comment-form',
+				'search-form',
+				'gallery',
+				'caption',
+			) );
+		}
 
 		/**
 		 * By adding add_theme_support( 'post-thumbnails' );, this feature when enabled allows you to setup featured images

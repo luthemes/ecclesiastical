@@ -8,6 +8,9 @@
 - Add customizer options for the feature image size and the footer credit text
 - Image sizes and theme mod defaults moved to `config/`
 - Build assets with Vite instead of Laravel Mix; assets are loaded through the Vite manifest
+- Don't add `html5` theme support on ClassicPress 2.0 and higher, which deprecates it
+- Fix a warning in the Plugins tab when the plugin API request fails
+- Add tests that run the Theme Unit Test data against a ClassicPress site
 - Fix the menu toggle screen reader text, which used keys that were never set
 - Load Merriweather, Fira Sans and Font Awesome from the theme
 
