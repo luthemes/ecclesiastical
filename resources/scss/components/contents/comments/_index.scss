@@ -55,11 +55,8 @@
                 margin-top: 0.25rem;
             }
 
-            .comment__reply {
-                &::before {
-                    content: "\00b7";
-                    margin-right: 0.5rem;
-                }
+            .comment__sep {
+                font-weight: bold;
             }
 
             .comment__moderation {

@@ -13,9 +13,9 @@
 	<header class="entry__header">
 		<?php Backdrop\Post\display_title( [ 'class' => 'entry__title' ] ); ?>
 		<div class="entry__metadata">
-			<?php Backdrop\Post\display_author( [ 'text' => '<i class="fa fa-user"></i> %s' ] ); ?>
-			<?php Backdrop\Post\display_date( [ 'text' => '<i class="fa fa-calendar-alt"></i> %s' ] ); ?>
-			<?php Backdrop\Post\display_comments_link( [ 'text' => '<i class="fa fa-comment"></i> %s' ] ); ?>
+			<?php Backdrop\Post\display_author( [ 'before' => '<span class="entry__metadata-item"><i class="fa fa-user entry__icon" aria-hidden="true"></i>', 'after' => '</span>' ] ); ?>
+			<?php Backdrop\Post\display_date( [ 'before' => '<span class="entry__metadata-item"><i class="fa fa-calendar-alt entry__icon" aria-hidden="true"></i>', 'after' => '</span>' ] ); ?>
+			<?php Backdrop\Post\display_comments_link( [ 'before' => '<span class="entry__metadata-item"><i class="fa fa-comment entry__icon" aria-hidden="true"></i>', 'after' => '</span>' ] ); ?>
 		</div>
 	</header>
     <?php if ( has_post_thumbnail() ) { ?>

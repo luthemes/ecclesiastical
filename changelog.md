@@ -9,12 +9,14 @@
 - Image sizes and theme mod defaults moved to `config/`
 - Build assets with Vite instead of Laravel Mix; assets are loaded through the Vite manifest
 - Fix the header dropdown position, add rounded corners and a fade and slide animation
+- Show user, calendar and comment icons in the post metadata, with spacing between items
 - Remove list bullets from the header menu, including the page-list fallback
 - Style the secondary menu as a centered row of links in the footer
 - Default the global layout to a right sidebar, and align the primary menu to the right of the header
 - Rename markup, styles and menu script to BEM naming, like Amicable (`site-header__container`, `entry__title`, `menu__items`, `site-layout--left-sidebar`)
 - Use the Backdrop pagination component (`pagination__items`, `pagination__anchor--current`) instead of `the_posts_pagination()`
 - Fix the primary menu id typo (`primaire`) and style the menu with the framework's `menu__item` classes
+- Add a real separator between the comment date and Reply instead of a CSS pseudo-element
 - Lay out the comment header with the avatar, author, date and reply aligned, and show the author and date even without an avatar
 - Update the readme resources and requirements notes
 - Don't add `html5` theme support on ClassicPress 2.0 and higher, which deprecates it
