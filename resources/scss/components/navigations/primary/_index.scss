@@ -222,7 +222,9 @@
                 left: unset;
 
                 a {
+                    border-radius: 0.5rem;
                     padding: 0.75em;
+                    transition: background 0.2s ease, color 0.2s ease;
 
                     &:hover,
                     &:focus {
@@ -230,29 +232,62 @@
                     }
                 }
 
+                // The dropdown sits under its parent and lines up with the parent's right edge.
+                // It is hidden with opacity and visibility, so it can fade and slide in.
                 .sub-menu {
+                    box-shadow: 0 0.5rem 1.5rem rgba( 0, 0, 0, 0.2 );
+                    border-radius: 0.5rem;
+                    left: auto;
+                    margin: 0;
+                    min-width: 14em;
+                    opacity: 0;
+                    padding: 0;
                     position: absolute;
-                    left: -9999em;
+                    right: 0;
+                    text-align: left;
                     top: 100%;
+                    transform: translateY( 0.5rem );
+                    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+                    visibility: hidden;
+                    z-index: 10;
 
                     .menu__item {
-                        margin-bottom: 0.063em;
+                        margin-bottom: 0;
                         position: relative;
-                        width: 20em;
+                        width: 100%;
 
                         a {
                             background: #333333;
+                            border-radius: 0;
                             color: #ffffff;
+                            transition: background 0.2s ease;
 
-                            &:hover {
+                            &:hover,
+                            &:focus {
                                 background: #444444;
                             }
                         }
 
+                        // Round the corners of the first and last items, because clipping the list
+                        // with overflow would also clip the flyouts.
+                        &:first-child > a {
+                            border-radius: 0.5rem 0.5rem 0 0;
+                        }
+
+                        &:last-child > a {
+                            border-radius: 0 0 0.5rem 0.5rem;
+                        }
+
+                        &:only-child > a {
+                            border-radius: 0.5rem;
+                        }
+
+                        // Deeper levels open sideways, towards the left because the menu is on the right.
                         .sub-menu {
-                            left: -9999em;
-                            position: absolute;
+                            left: auto;
+                            right: 100%;
                             top: 0;
+                            transform: translateX( 0.5rem );
 
                             .menu__item {
                                 a {
@@ -262,10 +297,13 @@
                         }
 
                         &:hover,
-                        &:focus,
+                        &:focus-within,
                         &.focus {
                             > .sub-menu {
-                                left: 101%;
+                                opacity: 1;
+                                transform: translateX( 0 );
+                                transition-delay: 0s;
+                                visibility: visible;
                             }
                         }
                     }
@@ -288,10 +326,13 @@
                 }
 
                 &:hover,
-                &:focus,
+                &:focus-within,
                 &.focus {
                     > .sub-menu {
-                        left: 0;
+                        opacity: 1;
+                        transform: translateY( 0 );
+                        transition-delay: 0s;
+                        visibility: visible;
                     }
                 }
             }
