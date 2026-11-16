@@ -9,6 +9,7 @@
 - Image sizes and theme mod defaults moved to `config/`
 - Build assets with Vite instead of Laravel Mix; assets are loaded through the Vite manifest
 - Fix the header dropdown position, add rounded corners and a fade and slide animation
+- Center the post metadata under the centered post title
 - Fix the post styles so they match Backdrop's `entry entry-type-post` classes, which restores the metadata spacing, centered titles and sticky background
 - Show user, calendar and comment icons in the post metadata, with spacing between items
 - Remove list bullets from the header menu, including the page-list fallback
