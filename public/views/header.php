@@ -24,10 +24,10 @@
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
-				<?php Benlumia007\Backdrop\Theme\Site\display_site_title(); ?>
-				<?php Benlumia007\Backdrop\Theme\Site\display_site_description(); ?>
+				<?php Backdrop\Site\display_title( [ 'class' => 'site-title' ] ); ?>
+				<?php Backdrop\Site\display_description( [ 'class' => 'site-description' ] ); ?>
 			</div>
-			<?php Benlumia007\Backdrop\Theme\Menu\display( 'menu', [ 'primary' ] ); ?>
+			<?php Ecclesiastical\display_menu( 'primary' ); ?>
 		</div>
 	</header>
 	<?php the_custom_header_markup(); ?>

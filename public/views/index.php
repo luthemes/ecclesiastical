@@ -9,7 +9,7 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 ?>
-<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
 		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
@@ -25,7 +25,7 @@
 					endif;
 				?>
 			</main>
-			<?php Benlumia007\Backdrop\Theme\Sidebar\display( 'sidebar', [ 'primary' ] ); ?>
+			<?php Ecclesiastical\display_sidebar( 'primary' ); ?>
 		</div>
 	</section>
 <?php $engine->display( 'footer' ); ?>

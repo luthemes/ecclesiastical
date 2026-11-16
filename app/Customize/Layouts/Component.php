@@ -13,17 +13,42 @@
  */
 namespace Ecclesiastical\Customize\Layouts;
 use Ecclesiastical\Customize\Layouts\Control\ImageRadio;
-use Benlumia007\Backdrop\Customize\Component as Customize;
+use Backdrop\Contracts\Bootable;
+use WP_Customize_Manager;
 
-class Component extends Customize {
-    public function panels( $manager ) {
+class Component implements Bootable {
+	/**
+	 * Boots the component.
+	 *
+	 * @return void
+	 */
+	public function boot(): void {
+		add_action( 'customize_register', [ $this, 'panels' ] );
+		add_action( 'customize_register', [ $this, 'sections' ] );
+		add_action( 'customize_register', [ $this, 'settings' ] );
+		add_action( 'customize_register', [ $this, 'controls' ] );
+	}
+
+	/**
+	 * Sanitizes the layout choice against the choices of the control.
+	 *
+	 * @param  string $input   Layout string.
+	 * @param  object $setting Setting being sanitized.
+	 * @return string
+	 */
+	public static function sanitize_layout( $input, $setting ) {
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+		return array_key_exists( $input, $choices ) ? $input : $setting->default;
+	}
+
+    public function panels( WP_Customize_Manager $manager ) {
 		$manager->add_panel( 'theme_options', [
             'title' => esc_html( 'Theme Options', 'ecclesiastical' ),
 			'priority' => 5,
         ] );
     }
 
-    public function sections( $manager ) {
+    public function sections( WP_Customize_Manager $manager ) {
         $manager->add_section( 'global_layout', [
             'title'    => esc_html__( 'Global Layout', 'ecclesiastical' ),
 			'panel'    => 'theme_options',
@@ -31,14 +56,14 @@ class Component extends Customize {
         ] );
     }
 
-    public function settings( $manager ) {
+    public function settings( WP_Customize_Manager $manager ) {
         $manager->add_setting( 'global_layout', [
             'default'           => 'left-sidebar',
-            'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::layouts',
+            'sanitize_callback' => [ __CLASS__, 'sanitize_layout' ],
         ] );
     }
 
-    public function controls( $manager ) {
+    public function controls( WP_Customize_Manager $manager ) {
         $manager->add_control(
 			new ImageRadio(
 				$manager,

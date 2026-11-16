@@ -13,13 +13,13 @@
  * Table of Content
  *
  * 1.0 - Compatibility Check
- * 2.0 - Backdrop
+ * 2.0 - Backdrop Framework
  */
 
 /**
  * 1.0 - Compatibility Check
  */
-if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
+if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '7.4', '<' ) ) {
 	require_once( get_parent_theme_file_path( 'app/functions-compat.php' ) );
 	return;
 }
@@ -30,7 +30,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( P
 require_once( get_parent_theme_file_path( 'app/functions-global.php' ) );
 
 /**
- * 2.0 - Backdrop Core
+ * 2.0 - Backdrop Framework
  */
 if ( file_exists( get_parent_theme_file_path( '/vendor/autoload.php' ) ) ) {
 	require_once get_parent_theme_file_path( '/vendor/autoload.php' );

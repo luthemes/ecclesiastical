@@ -9,7 +9,7 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 ?>
-<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
 		<div id="global-layout" class="no-sidebar">

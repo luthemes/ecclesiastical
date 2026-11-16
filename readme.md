@@ -1,15 +1,17 @@
 # Ecclesiastical
-Ecclesiastical is a starter theme for WordPress
+Ecclesiastical is a starter theme for ClassicPress
 
-The main objective of this starter theme is to help myself and other developer to create a theme without the need to code. The starter theme also uses a framework Backdrop Core to its work for this starter theme.
+The main objective of this starter theme is to help myself and other developer to create a theme without the need to code. The starter theme also uses the Backdrop framework (backdrop-dev/framework 1.x) to do its work for this starter theme.
 
 ## Requirements
 There are few things that we will need to begin.
 
-- WordPress 4.9 or higher
-- PHP 5.6 or higher ( PHP 7.4 is recommended )
+- ClassicPress 2.0 or higher
+- PHP 7.4 or higher
 - Git
 - Composer
+
+Install the dependencies with `composer install` in the theme folder before activating the theme.
 
 
 ## Documentations

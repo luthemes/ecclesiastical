@@ -1,6 +1,6 @@
 <?php
 /**
- * Layouts
+ * Service provider ( app/Customize/Layouts/Provider.php )
  *
  * @package   Ecclesiastical
  * @author    Benjamin Lu ( benlumia007@gmail.com )
@@ -9,26 +9,27 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 
-/**
- * Define namespace
- */
 namespace Ecclesiastical\Customize\Layouts;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Ecclesiastical\Customize\Layouts\Component;
+
+use Backdrop\Core\ServiceProvider;
 
 class Provider extends ServiceProvider {
+
 	/**
-	 * Binds the implementation of the attributes contract to the container.
+	 * Binds a single instance of the component to the container.
 	 *
-	 * @since  2.0.0
-	 * @access public
 	 * @return void
 	 */
-	public function register() {
-		$this->app->singleton( 'customize/layouts', Component::class );
-    }
-    
-    public function boot() {
-        $this->app->resolve( 'customize/layouts' )->boot();
-    }
+	public function register(): void {
+		$this->app->singleton( Component::class );
+	}
+
+	/**
+	 * Boots the component.
+	 *
+	 * @return void
+	 */
+	public function boot(): void {
+		$this->app->resolve( Component::class )->boot();
+	}
 }

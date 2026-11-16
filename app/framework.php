@@ -10,20 +10,12 @@
  */
 
 /**
- * Create a new framework instance
- *x
- * This will create an instance of the framework allowing you to initialize the theme.
+ * Create a new application instance
+ *
+ * Backdrop 1.x registers its own providers (attributes, languages, templates, template hierarchy and views) when the
+ * application is created. If an application has already been created, we reuse it.
  */
-$ecclesiastical = new Benlumia007\Backdrop\Framework();
-
-/**
- * Register default providers
- */
-$ecclesiastical->provider( Benlumia007\Backdrop\FontAwesome\Provider::class );
-$ecclesiastical->provider( Benlumia007\Backdrop\GoogleFonts\Provider::class );
-$ecclesiastical->provider( Benlumia007\Backdrop\Template\Hierarchy\Provider::class );
-$ecclesiastical->provider( Benlumia007\Backdrop\Template\Manager\Provider::class );
-$ecclesiastical->provider( Benlumia007\Backdrop\Template\View\Provider::class );
+$ecclesiastical = \Backdrop\booted() ? \Backdrop\app() : new \Backdrop\Core\Application();
 
 /**
  * Register Service Provider with the Framework
@@ -32,6 +24,11 @@ $ecclesiastical->provider( Ecclesiastical\Admin\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Customize\Layouts\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Menu\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Sidebar\Provider::class );
+
+/**
+ * Allow child themes and plugins to add their own providers.
+ */
+do_action( 'ecclesiastical/bootstrap', $ecclesiastical );
 
 /**
  * Boot the Framework

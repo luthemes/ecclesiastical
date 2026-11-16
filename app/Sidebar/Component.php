@@ -1,28 +1,63 @@
 <?php
 /**
- * Backdrop Core ( app/Sidebar/Component.php )
+ * Sidebars ( app/Sidebar/Component.php )
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @license   GNU General PUblic License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * @package   Ecclesiastical
+ * @author    Benjamin Lu ( benlumia007@gmail.com )
+ * @copyright Copyright (C) 2016-2021. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 
-
 namespace Ecclesiastical\Sidebar;
-use Benlumia007\Backdrop\Theme\Sidebar\Component as SidebarContract;
 
-class Component extends SidebarContract {
-    public function sidebars() {
-        return array(
-            'primary' => [
-                'name' => esc_html__( 'Primary Sidebar', 'ecclesiastical' ),
-                'desc' => esc_html__( 'test', 'ecclesiastical' ),
-            ],
-            'secondary' => [
-                'name' => esc_html__( 'Secondary Sidebar', 'ecclesiastical' ),
-                'desc' => esc_html__( 'test', 'ecclesiastical' ),
-            ]
-        );
-    }
-}   
+use Backdrop\Contracts\Bootable;
+
+class Component implements Bootable {
+
+	/**
+	 * Sidebars that the theme registers ( id => name and description ).
+	 *
+	 * @return array
+	 */
+	public function sidebars(): array {
+		return [
+			'primary'   => [
+				'name' => esc_html__( 'Primary Sidebar', 'ecclesiastical' ),
+				'desc' => esc_html__( 'test', 'ecclesiastical' ),
+			],
+			'secondary' => [
+				'name' => esc_html__( 'Secondary Sidebar', 'ecclesiastical' ),
+				'desc' => esc_html__( 'test', 'ecclesiastical' ),
+			],
+		];
+	}
+
+	/**
+	 * Registers the sidebars.
+	 *
+	 * @return void
+	 */
+	public function register(): void {
+		foreach ( $this->sidebars() as $id => $sidebar ) {
+			register_sidebar( apply_filters( 'ecclesiastical/register/sidebar', [
+				'name'          => $sidebar['name'],
+				'id'            => $id,
+				'description'   => $sidebar['desc'],
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			] ) );
+		}
+	}
+
+	/**
+	 * Boots the component.
+	 *
+	 * @return void
+	 */
+	public function boot(): void {
+		add_action( 'widgets_init', [ $this, 'register' ] );
+	}
+}

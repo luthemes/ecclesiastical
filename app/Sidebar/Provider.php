@@ -1,41 +1,35 @@
 <?php
 /**
- * Backdrop Core ( src/Tools/ServiceProvider.php )
+ * Service provider ( app/Sidebar/Provider.php )
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @license   GNU General PUblic License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * @package   Ecclesiastical
+ * @author    Benjamin Lu ( benlumia007@gmail.com )
+ * @copyright Copyright (C) 2016-2021. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 
-/**
- * Define namespace
- */
 namespace Ecclesiastical\Sidebar;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Ecclesiastical\Sidebar\Component;
 
-/**
- * Attr provider class.
- *
- * @since  5.0.0
- * @access public
- */
+use Backdrop\Core\ServiceProvider;
+
 class Provider extends ServiceProvider {
 
 	/**
-	 * Binds the implementation of the attributes contract to the container.
+	 * Binds a single instance of the component to the container.
 	 *
-	 * @since  2.0.0
-	 * @access public
 	 * @return void
 	 */
-	public function register() {
-		$this->app->singleton( 'sidebar', Component::class );
+	public function register(): void {
+		$this->app->singleton( Component::class );
+	}
 
-    }
-    
-    public function boot() {
-        $this->app->resolve( 'sidebar' )->boot();
-    }
+	/**
+	 * Boots the component.
+	 *
+	 * @return void
+	 */
+	public function boot(): void {
+		$this->app->resolve( Component::class )->boot();
+	}
 }
