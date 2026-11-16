@@ -10,20 +10,20 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php Backdrop\Post\display_title( [ 'class' => 'entry-title' ] ); ?>
-		<div class="entry-metadata">
+	<header class="entry__header">
+		<?php Backdrop\Post\display_title( [ 'class' => 'entry__title' ] ); ?>
+		<div class="entry__metadata">
 			<?php Backdrop\Post\display_author( [ 'text' => '<i class="fa fa-user"></i> %s' ] ); ?>
 			<?php Backdrop\Post\display_date( [ 'text' => '<i class="fa fa-calendar-alt"></i> %s' ] ); ?>
 			<?php Backdrop\Post\display_comments_link( [ 'text' => '<i class="fa fa-comment"></i> %s' ] ); ?>
 		</div>
 	</header>
     <?php if ( has_post_thumbnail() ) { ?>
-        <picture class="post-thumbnail">
+        <picture class="entry__thumbnail">
             <?php the_post_thumbnail( Ecclesiastical\Tools\Mod::get( 'theme_content_feature_image' ) ); ?>
         </picture>
     <?php } ?>
-	<div class="entry-excerpt">
+	<div class="entry__excerpt">
 		<?php the_excerpt(); ?>
 	</div>
 </article>

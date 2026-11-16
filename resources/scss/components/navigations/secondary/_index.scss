@@ -7,17 +7,17 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-.secondary-navigation {
+.secondary-menu {
     clear: both;
     content: "";
     display: table;
     font-size: 0.975rem;
     margin: 0 auto;
 
-    ul {
+    .menu__items {
         list-style-type: none;
 
-        li {
+        .menu__item {
             float: left;
             padding: 0 0.6rem 1rem 0 ;
         }

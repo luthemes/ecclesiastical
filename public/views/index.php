@@ -12,14 +12,14 @@
 <?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
-		<div id="layout" class="<?php echo esc_attr( Ecclesiastical\Tools\Mod::get( 'global_layout' ) ); ?>">
+		<div id="layout" class="site-layout site-layout--<?php echo esc_attr( Ecclesiastical\Tools\Mod::get( 'global_layout' ) ); ?>">
 			<main id="main" class="content-area">
 				<?php
 					if ( have_posts() ) :
 						while ( have_posts() ) : the_post();
 							$engine->display( 'content', get_post_format()  );
 						endwhile;
-						the_posts_pagination();
+						$engine->display( 'nav/pagination', 'posts' );
 					else :
 							$engine->display( 'content/none' );
 					endif;

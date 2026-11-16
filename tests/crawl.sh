@@ -75,13 +75,14 @@ expect() {
 
 # Theme features.
 expect / 'ecclesiastical-screen' 'theme stylesheet is enqueued'
-expect / 'class="site-title"' 'site title uses the theme class'
+expect / 'class="site-header__title"' 'site title uses the BEM class'
 expect / 'id="primary-menu"' 'primary menu renders'
-expect / 'id="menu-social"' 'social menu renders'
-expect / 'class="site-footer-credit"' 'footer credit renders'
+expect / 'class="social-menu"' 'social menu renders'
+expect / 'class="site-footer__info"' 'footer info renders'
 expect / 'Powered By <a class="cp-link"' 'footer links to ClassicPress'
+expect / 'menu__item' 'menu items use BEM classes'
 expect / 'name="generator"' 'Backdrop adds the generator meta tag'
-expect /template-paginated/ 'page-links' 'split post shows page links'
+expect /template-paginated/ 'entry__page-links' 'split post shows page links'
 expect /template-password-protected/ 'post-password-form' 'password-protected post shows the password form'
 expect /does-not-exist-at-all/ 'It looks like you stumbled upon a page' '404 shows the default message'
 

@@ -21,13 +21,13 @@ namespace Ecclesiastical;
  */
 function display_comment( $comment, $args, $depth ) { ?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
-		<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-			<header class="comment-meta">
-				<div class="comment-author vcard">
+		<div id="div-comment-<?php comment_ID(); ?>" class="comment__body">
+			<header class="comment__meta">
+				<div class="comment__author vcard">
 					<?php if ( 0 !== $args['avatar_size'] ) : ?>
 						<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
 						<cite class="fn"><?php echo get_comment_author_link(); ?></cite>
-						<div class="comment-metadata">
+						<div class="comment__metadata">
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 								<?php
 									/* translators: 1: date, 2: time */
@@ -44,13 +44,13 @@ function display_comment( $comment, $args, $depth ) { ?>
 								?>
 							</span>
 							<?php if ( '0' === $comment->comment_approved ) : ?>
-								<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'ecclesiastical' ); ?></em><br/>
+								<em class="comment__moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'ecclesiastical' ); ?></em><br/>
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>
 				</div>
 			</header>
-			<div class="comment-content">
+			<div class="comment__content">
 				<?php comment_text(); ?>
 			</div>
 		</div>

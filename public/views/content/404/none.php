@@ -10,12 +10,12 @@
 
 ?>
 <article id="post-0" <?php post_class( 'post' ); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title">
+	<header class="entry__header">
+		<h1 class="entry__title">
 			<?php esc_html_e( 'Nothing Found', 'ecclesiastical' ); ?>
 		</h1>
 	</header>
-	<div class="entry-content">
+	<div class="entry__content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 			<p>
 				<?php

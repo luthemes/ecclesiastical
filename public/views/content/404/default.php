@@ -11,10 +11,10 @@
 <?php $error = new Ecclesiastical\Template\ErrorPage(); ?>
 <?php $error->setup(); ?>
 <article id="post-0" <?php post_class( 'post' ); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php $error->displayTitle(); ?></h1>
+	<header class="entry__header">
+		<h1 class="entry__title"><?php $error->displayTitle(); ?></h1>
 	</header>
-	<div class="entry-content">
+	<div class="entry__content">
 		<?php $error->displayContent(); ?>
 	</div>
 </article>

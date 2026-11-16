@@ -11,7 +11,7 @@
 ?>
 	<footer id="colophon" class="site-footer">
 		<?php Ecclesiastical\display_menu( 'secondary' ); ?>
-		<div class="site-info">
+		<div class="site-footer__info">
 			<?php Ecclesiastical\Template\Footer::displayCredit(); ?>
 		</div>
 		<?php Ecclesiastical\display_menu( 'social' ); ?>

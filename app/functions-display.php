@@ -22,38 +22,36 @@ namespace Ecclesiastical;
 function display_menu( string $location ): void {
 	if ( 'primary' === $location ) {
 		if ( has_nav_menu( 'primary' ) ) { ?>
-			<nav id="primaire" class="primary-navigation">
+			<nav id="primary" class="primary-menu">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ecclesiastical' ); ?></button>
 				<?php
 					wp_nav_menu( [
 						'theme_location' => 'primary',
 						'container'      => '',
 						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu-items',
+						'menu_class'     => 'menu__items',
 						'depth'          => 2,
 					] );
 				?>
 			</nav>
 		<?php }
 	} elseif ( 'secondary' === $location ) { ?>
-		<nav id="secondary" class="secondary-navigation">
-			<?php wp_nav_menu( [ 'theme_location' => 'secondary', 'depth' => 1 ] ); ?>
+		<nav id="secondary" class="secondary-menu">
+			<?php wp_nav_menu( [ 'theme_location' => 'secondary', 'container' => '', 'menu_class' => 'menu__items', 'depth' => 1 ] ); ?>
 		</nav>
 	<?php } elseif ( 'social' === $location ) {
 		if ( has_nav_menu( 'social' ) ) { ?>
-			<nav id="social" class="site-social">
+			<nav id="social" class="social-menu">
 				<?php
 					wp_nav_menu( [
-						'theme_location'  => 'social',
-						'container'       => 'nav',
-						'container_id'    => 'menu-social',
-						'container_class' => 'menu-social',
-						'menu_id'         => 'menu-social-items',
-						'menu_class'      => 'menu-items',
-						'depth'           => 1,
-						'link_before'     => '<span class="screen-reader-text">',
-						'link_after'      => '</span>',
-						'fallback_cb'     => '',
+						'theme_location' => 'social',
+						'container'      => '',
+						'menu_id'        => 'social-menu',
+						'menu_class'     => 'menu__items',
+						'depth'          => 1,
+						'link_before'    => '<span class="screen-reader-text">',
+						'link_after'     => '</span>',
+						'fallback_cb'    => '',
 					] );
 				?>
 			</nav>
@@ -68,7 +66,7 @@ function display_menu( string $location ): void {
  * @return void
  */
 function display_sidebar( string $sidebar_id ): void { ?>
-	<div id="aside" class="widget-area">
+	<div id="aside" class="site-aside">
 		<?php dynamic_sidebar( $sidebar_id ); ?>
 	</div>
 <?php }

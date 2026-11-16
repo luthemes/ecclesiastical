@@ -7,7 +7,7 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-.primary-navigation {
+.primary-menu {
 	display: block;
     margin: 0;
 
@@ -64,11 +64,11 @@
     } 
     
     /* Hide Submenus by default using absolute positioning instead of display:none;. */
-    .nav-menu,
-    .nav-menu li,
-    .nav-menu ul,
-    .nav-menu li:hover > ul,
-    .nav-menu li:focus > ul {
+    .menu__items,
+    .menu__items li,
+    .menu__items ul,
+    .menu__items li:hover > ul,
+    .menu__items .menu__item:focus > ul {
         left: -9999em;
         list-style: none;
 		margin: 0;
@@ -77,7 +77,7 @@
         top: 100%;
     }
 
-    .nav-menu {
+    .menu__items {
         ul {
             a {
                 background-color:#444444;
@@ -110,7 +110,7 @@
 }
 
 .toggled {
-    .nav-menu {
+    .menu__items {
         display: block;
         left: 1.125em;
         margin: 2rem 1.125em 0 1.125em 1.125em;
@@ -118,7 +118,7 @@
         position: fixed;
         top: 6em;
 
-        li {
+        .menu__item {
             left: unset;
             position: relative;
 
@@ -142,10 +142,10 @@
     }
 }
 
-.nav-menu .current_page_item > a,
-.nav-menu .current_page_ancestor > a,
-.nav-menu .current-menu-item > a,
-.nav-menu .current-menu-ancestor > a { 
+.menu__items .current_page_item > a,
+.menu__items .current_page_ancestor > a,
+.menu__items .current-menu-item > a,
+.menu__items .menu__item--ancestor > a { 
 	font-weight: 900;
 }
 
@@ -157,7 +157,7 @@
 	}
 	
 	.toggled {
-		.nav-menu {
+		.menu__items {
 			margin-top: 1rem;
 		}
 	}
@@ -171,7 +171,7 @@
 	}
 	
 	.toggled {
-		.nav-menu {
+		.menu__items {
 			margin-top: 1rem;
 		}
 	}
@@ -185,7 +185,7 @@
 	}
 	
 	.toggled {
-		.nav-menu {
+		.menu__items {
 			margin-top: 1rem;
 		}
 	}
@@ -200,18 +200,18 @@
 }
 
 @media screen and (min-width: 1025px) {
-    .primary-navigation {
+    .primary-menu {
         a {
             background: transparent;
             color: #000000;
         }
         
-        .nav-menu {
+        .menu__items {
             display: flex;
             position: static;
             justify-content: end;
 
-            li {
+            .menu__item {
                 position: relative;
                 width: max-content;
                 left: unset;
@@ -230,7 +230,7 @@
                     left: -9999em;
                     top: 100%;
 
-                    li {
+                    .menu__item {
                         margin-bottom: 0.063em;
                         position: relative;
                         width: 20em;
@@ -249,7 +249,7 @@
                             position: absolute;
                             top: 0;
 
-                            li {
+                            .menu__item {
                                 a {
                                     padding-left: 0.938rem;
                                 }
@@ -265,8 +265,8 @@
                         }
                     }
 
-                    .menu-item-has-children,
-                    .page_item_has_children {
+                    .has-children,
+                    .has-children {
                         > {
                             a {
                                 &:after {
@@ -291,8 +291,8 @@
                 }
             }
 
-            .menu-item-has-children,
-            .page_item_has_children {
+            .has-children,
+            .has-children {
                 > {
                     a {
                         &:after {

@@ -13,8 +13,8 @@
 .content-area,
 .post-navigation,
 .posts-navigation,
-.entry-content,
-.comment-meta {
+.entry__content,
+.comment__meta {
     &:before,
     &:after {
         clear: both;

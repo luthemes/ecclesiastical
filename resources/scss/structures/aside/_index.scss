@@ -9,37 +9,37 @@
 /// @link   https://getbenonit.com/themes/ecclesiastical
 ////
 
-.left-sidebar {
-    .widget-area {
+.site-layout--left-sidebar {
+    .site-aside {
         float: none;
         width: 100%;
     }
 }
 
-.right-sidebar {
-    .widget-area {
+.site-layout--right-sidebar {
+    .site-aside {
         float: none;
         width: 100%;
     }
 }
 
-.no-sidebar {
-    .widget-area {
+.site-layout--no-sidebar {
+    .site-aside {
         float: none;
         width: 100%;
     }
 }
 
 @media screen and ( min-width: 73.125rem ) {
-    .left-sidebar {
-        .widget-area {
+    .site-layout--left-sidebar {
+        .site-aside {
             float: left;
             width: 26.27865961199295%;
         }
     }
 
-    .right-sidebar {
-        .widget-area {
+    .site-layout--right-sidebar {
+        .site-aside {
             float: right;
             width: 26.27865961199295%;
         }
