@@ -1,14 +1,15 @@
-Ecclesiastical WordPress Theme
+Ecclesiastical ClassicPress Theme
 ================================================================================================
 Contributor: benlumia007
 Tags: custom-background, custom-header, right-sidebar
-Requres at least: 4.4
-Tested up to: 4.9.4
+Requires at least: 4.9
+Requires PHP: 7.4
+Requires CP: 2.0
 Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Ecclesiastical WordPress Theme, Copyright (C) 2016, Benjamin Lu
+Ecclesiastical ClassicPress Theme, Copyright (C) 2016, Benjamin Lu
 Ecclesiastical is distributed under the terms of the GNU GPL
 
 Ecclesiastical is a standard design with responsive capability.
@@ -35,7 +36,7 @@ Customizer
 
 Description
 ================================================================================================
-Ecclesiastical is a responsive WordPress theme.
+Ecclesiastical is a responsive ClassicPress theme.
 
 
 Frequently Asked Questions
@@ -64,5 +65,5 @@ License: Sil Open Font License
 Source: https://fonts.google.com/specimen/Fira+Sans
 
 Benjamin Lu (https://github.com/benlumia007/)
-Backdrop (https://github.com/benlumia007/backdrop)
+Backdrop (https://github.com/backdrop-dev/framework)
 License: GPLv2 or Higher

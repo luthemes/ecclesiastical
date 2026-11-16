@@ -9,7 +9,7 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 ?>
-<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
 <?php if ( post_password_required() ) { return; } ?>
 
 <?php if ( comments_open() ) { ?>
@@ -34,7 +34,7 @@
 				wp_list_comments( [
 					'style'       => 'ul',
 					'avatar_size' => 50,
-					'callback' => 'Benlumia007\Backdrop\Theme\Comments\Component::display_comments_list'
+					'callback' => 'Ecclesiastical\display_comment'
 				] );
 			?>
 		</ul>

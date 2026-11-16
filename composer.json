@@ -1,11 +1,13 @@
 {
-    "name": "benlumia007/ecclesiastical",
-    "description": "Ecclesiastical needs a description update.",
+    "name": "luthemes/ecclesiastical",
+    "description": "Ecclesiastical is a starter theme for ClassicPress, built on the Backdrop framework.",
+    "type": "wordpress-theme",
     "keywords": [
-        "wordpress",
+        "classicpress",
+        "classicpress-theme",
         "wordpress-theme"
     ],
-    "homepage": "https://github.com/benlumia007/ecclesiastical",
+    "homepage": "https://github.com/luthemes/ecclesiastical",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -17,25 +19,24 @@
     "autoload": {
         "psr-4": {
             "Ecclesiastical\\": "app/"
-		},
-		"files":[
-			"app/framework.php",
-			"app/functions-filters.php",
-			"app/functions-scripts.php",
-			"app/functions-setup.php"
-		]
+        },
+        "files": [
+            "app/framework.php",
+            "app/functions-comments.php",
+            "app/functions-display.php",
+            "app/functions-filters.php",
+            "app/functions-scripts.php",
+            "app/functions-setup.php"
+        ]
     },
     "require": {
-        "php": ">=7.3.24",
-        "benlumia007/backdrop": "v3.0.0.x-dev",
-        "benlumia007/backdrop-customize": "v1.0.0.x-dev",
-        "benlumia007/backdrop-customize-helpers": "v1.0.0.x-dev",
-        "benlumia007/backdrop-fontawesome": "v1.0.0.x-dev",
-        "benlumia007/backdrop-googlefonts": "v1.0.0.x-dev",
-        "benlumia007/backdrop-template-helpers": "v1.0.0.x-dev",
-        "benlumia007/backdrop-template-hierarchy": "v1.0.0.x-dev",
-        "benlumia007/backdrop-template-manager": "v1.0.0.x-dev",
-        "benlumia007/backdrop-template-view": "v1.0.0.x-dev",
-        "benlumia007/backdrop-theme": "v1.0.0.x-dev"
+        "php": ">=7.4",
+        "backdrop-dev/framework": "^1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4"
+        }
     }
 }

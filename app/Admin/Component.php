@@ -10,16 +10,27 @@
  */
 
 namespace Ecclesiastical\Admin;
-use Benlumia007\Backdrop\Theme\Admin\Component as AdminContract;
+use Backdrop\Contracts\Bootable;
 
 /**
  * Implements Displayable
  */
-class Component extends AdminContract {
+class Component implements Bootable {
 	/**
 	 * Theme Info
 	 */
 	private $theme_info = null;
+	/**
+	 * Current tab
+	 */
+	private $tab = 'introduction';
+	/**
+	 * Boot
+	 */
+	public function boot(): void {
+		add_action( 'admin_menu', [ $this, 'menu' ] );
+		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue' ] );
+	}
 	/**
 	 * Construct
 	 */
@@ -91,7 +102,7 @@ class Component extends AdminContract {
 		<?php esc_html_e( 'Hope you are enjoying the theme. ', 'ecclesiastical' ); ?>
 		<h2 class="admin-title"><?php esc_html_e( 'Recommended Plugins', 'ecclesiastical' ); ?></h2>
 		<ul>
-			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails' ); ?>"><?php esc_html_e( 'Regenerate Thumbnails', 'ecclesiastical' ); ?></a></li>
+			<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails' ); ?>"><?php esc_html_e( 'Regenerate Thumbnails', 'ecclesiastical' ); ?></a></li>
 		</ul>
 	<?php }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Backdrop Core ( src/Tools/ServiceProvider.php )
+ * Service provider ( app/Admin/Provider.php )
  *
  * @package   Ecclesiastical
  * @author    Benjamin Lu ( benlumia007@gmail.com )
@@ -9,34 +9,27 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 
-/**
- * Define namespace
- */
 namespace Ecclesiastical\Admin;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Ecclesiastical\Admin\Component;
 
-/**
- * Attr provider class.
- *
- * @since  5.0.0
- * @access public
- */
+use Backdrop\Core\ServiceProvider;
+
 class Provider extends ServiceProvider {
 
 	/**
-	 * Binds the implementation of the attributes contract to the container.
+	 * Binds a single instance of the component to the container.
 	 *
-	 * @since  2.0.0
-	 * @access public
 	 * @return void
 	 */
-	public function register() {
-		$this->app->singleton( 'admin', Component::class );
+	public function register(): void {
+		$this->app->singleton( Component::class );
+	}
 
-    }
-    
-    public function boot() {
-        $this->app->resolve( 'admin' )->boot();
-    }
+	/**
+	 * Boots the component.
+	 *
+	 * @return void
+	 */
+	public function boot(): void {
+		$this->app->resolve( Component::class )->boot();
+	}
 }

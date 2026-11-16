@@ -11,7 +11,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
+		<?php Backdrop\Post\display_title( [ 'class' => 'entry-title' ] ); ?>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>

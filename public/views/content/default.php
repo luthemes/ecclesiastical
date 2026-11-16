@@ -11,11 +11,11 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
+		<?php Backdrop\Post\display_title( [ 'class' => 'entry-title' ] ); ?>
 		<div class="entry-metadata">
-			<?php Benlumia007\Backdrop\Theme\Entry\display_author(); ?>
-			<?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
-			<?php Benlumia007\Backdrop\Theme\Entry\display_comments_link(); ?>
+			<?php Backdrop\Post\display_author( [ 'text' => '<i class="fa fa-user"></i> %s' ] ); ?>
+			<?php Backdrop\Post\display_date( [ 'text' => '<i class="fa fa-calendar-alt"></i> %s' ] ); ?>
+			<?php Backdrop\Post\display_comments_link( [ 'text' => '<i class="fa fa-comment"></i> %s' ] ); ?>
 		</div>
 	</header>
     <?php if ( has_post_thumbnail() ) { ?>

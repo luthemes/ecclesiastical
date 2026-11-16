@@ -26,6 +26,12 @@ namespace Ecclesiastical;
  */
 add_action( 'wp_enqueue_scripts', function() {
 	/**
+	 * Fonts and icons. These were previously loaded by the Backdrop Google Fonts and Font Awesome packages.
+	 */
+	wp_enqueue_style( 'ecclesiastical-fonts', 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Merriweather:wght@400;700&display=swap', array(), null );
+	wp_enqueue_style( 'ecclesiastical-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4' );
+
+	/**
 	 * Rather than enqueue the main stylesheet, we are going to enqueue sceen.css since all of the styles will
 	 * go here. We only need parse the information for the Theme in style.css so that it can be activated.
 	 */

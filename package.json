@@ -5,14 +5,14 @@
   "main": "resources/assets/js/app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benlumia007/ecclesiastical.git"
+    "url": "git+https://github.com/luthemes/ecclesiastical.git"
   },
   "author": "Benjamin Lu",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/benlumia007/ecclesiastical/issues"
+    "url": "https://github.com/luthemes/ecclesiastical/issues"
   },
-  "homepage": "https://github.com/benlumia007/ecclesiastical#readme",
+  "homepage": "https://github.com/luthemes/ecclesiastical#readme",
   "scripts": {
     "build": "npm run prod && npm run export",
     "watch": "mix watch",

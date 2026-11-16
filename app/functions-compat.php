@@ -28,17 +28,17 @@ function ecclesiastical_compat_message() {
 
 		return sprintf(
 			// Translators: 1 is the required WordPress version and 2 is the user's current version.
-			__( 'ecclesiastical requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'ecclesiastical' ),
+			__( 'ecclesiastical requires at least ClassicPress or WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'ecclesiastical' ),
 			'4.9',
 			$GLOBALS['wp_version']
 		);
 
-	} elseif ( version_compare( PHP_VERSION, '5.6', '<' ) ) {
+	} elseif ( version_compare( PHP_VERSION, '7.4', '<' ) ) {
 
 		return sprintf(
 			// Translators: 1 is the required PHP version and 2 is the user's current version.
 			__( 'ecclesiastical requires at least PHP version %1$s. You are running version %2$s. Please upgrade and try again.', 'ecclesiastical' ),
-			'5.6',
+			'7.4',
 			PHP_VERSION
 		);
 	}
