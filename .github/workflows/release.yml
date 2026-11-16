@@ -21,7 +21,7 @@ jobs:
                   node-version: 24
 
             # The release tag (without a leading "v") must match the `Version:` header in
-            # style.css, and the zip is named "{repo}.{version}.zip", e.g. ecclesiastical.1.0.3.zip.
+            # style.css, and the zip is named "{repo}.{version}.zip", e.g. ecclesiastical.0.0.1.zip.
             - name: Resolve version
               id: version
               run: |

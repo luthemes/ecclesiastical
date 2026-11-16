@@ -1,6 +1,6 @@
 # Change Log
 
-## 1.0.3 - TBD
+## 0.0.1 - November 16, 2026
 - Switch to ClassicPress: add Requires CP header, require PHP 7.4, and link to ClassicPress in the footer
 - Switch to Backdrop framework 1.x (backdrop-dev/framework)
 - Menus, sidebars and the layout customizer are now theme components

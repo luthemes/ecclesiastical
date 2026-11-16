@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-header, custom-menu, featured-images, righ
 Requires at least: 4.9
 Requires PHP: 7.4
 Requires CP: 2.0
-Stable tag: 1.0.3
+Stable tag: 0.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
