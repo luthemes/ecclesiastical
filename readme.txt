@@ -64,6 +64,11 @@ Designer: Carrois Apostrophe
 License: Sil Open Font License
 Source: https://fonts.google.com/specimen/Fira+Sans
 
+Header image ( public/images/header-image.jpg )
+Photo of a church auditorium by jgonzales2401
+License: CC0 1.0 Universal ( https://creativecommons.org/publicdomain/zero/1.0/ )
+Source: https://wordpress.org/photos/photo/9766dde15d/
+
 Benjamin Lu (https://github.com/benlumia007/)
 Backdrop (https://github.com/backdrop-dev/framework)
 License: GPLv2 or Higher
