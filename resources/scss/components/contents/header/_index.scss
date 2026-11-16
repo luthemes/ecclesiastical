@@ -10,8 +10,20 @@
 .site-header {
     .site-header__container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-template-columns: 1fr auto;
         padding: 1.125rem;
+
+        .primary-menu {
+            justify-self: end;
+            text-align: right;
+
+            .menu__items {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
 
         .site-header__branding {    
             .site-header__title {

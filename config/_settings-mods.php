@@ -19,7 +19,7 @@
 return [
 
 	// Default global layout ( left-sidebar, right-sidebar or no-sidebar ).
-	'global_layout' => 'left-sidebar',
+	'global_layout' => 'right-sidebar',
 
 	// Whether to show a random powered by quote by default. If set to `false`,
 	// the `theme_footer_custom_credit` value will be used.
