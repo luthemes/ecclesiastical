@@ -69,6 +69,10 @@ Photo of a church auditorium by jgonzales2401
 License: CC0 1.0 Universal ( https://creativecommons.org/publicdomain/zero/1.0/ )
 Source: https://wordpress.org/photos/photo/9766dde15d/
 
+Screenshot ( screenshot.png )
+Captured from the theme running in ClassicPress with sample text written for the theme. It includes the header image credited above.
+License: GPLv2 or later
+
 Benjamin Lu (https://github.com/benlumia007/)
 Backdrop (https://github.com/backdrop-dev/framework)
 License: GPLv2 or Higher
