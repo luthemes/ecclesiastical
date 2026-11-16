@@ -10,9 +10,18 @@ There are few things that we will need to begin.
 - PHP 7.4 or higher
 - Git
 - Composer
+- Node.js 20.19 or higher (to build the assets)
 
 Install the dependencies with `composer install` in the theme folder before activating the theme.
 
+
+## Development
+The styles and scripts are built with [Vite](https://vite.dev).
+
+- `npm install` installs the build tools
+- `npm run watch` rebuilds the assets while you work
+- `npm run prod` builds the assets into `public/assets`
+- `npm run build` builds the assets and exports the theme into the `ecclesiastical` folder
 
 ## Documentations
 Coming Soon.

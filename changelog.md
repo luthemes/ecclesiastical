@@ -7,6 +7,8 @@
 - Add Appearance > Ecclesiastical Settings page (General, Themes and Plugins) with options to disable emoji, the toolbar and embeds, and to choose a private page for the 404 error
 - Add customizer options for the feature image size and the footer credit text
 - Image sizes and theme mod defaults moved to `config/`
+- Build assets with Vite instead of Laravel Mix; assets are loaded through the Vite manifest
+- Fix the menu toggle screen reader text, which used keys that were never set
 - Load Merriweather, Fira Sans and Font Awesome from the theme
 
 ## 1.0.2 - October 28, 2021

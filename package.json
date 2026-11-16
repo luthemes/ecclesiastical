@@ -1,8 +1,8 @@
 {
   "name": "ecclesiastical",
   "version": "1.0.0",
-  "description": "Ecclesiastical needs a description update.",
-  "main": "resources/assets/js/app.js",
+  "description": "Ecclesiastical is a starter theme for ClassicPress, built on the Backdrop framework.",
+  "main": "resources/js/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luthemes/ecclesiastical.git"
@@ -12,18 +12,22 @@
   "bugs": {
     "url": "https://github.com/luthemes/ecclesiastical/issues"
   },
-  "homepage": "https://github.com/luthemes/ecclesiastical#readme",
+  "homepage": "https://luthemes.com/portfolio/ecclesiastical",
   "scripts": {
     "build": "npm run prod && npm run export",
-    "watch": "mix watch",
-    "prod": "mix --production",
-    "export": "mix --mix-config=webpack.mix.export.js"
+    "watch": "vite build --watch",
+    "prod": "vite build",
+    "export": "node export-theme.js"
   },
   "devDependencies": {
-    "laravel-mix": "^6.0.31",
-    "postcss-preset-env": "^6.7.0",
-    "resolve-url-loader": "^4.0.0",
-    "sass": "^1.42.1",
-    "sass-loader": "^11.1.1"
+    "sass": "^1.93.3",
+    "vite": "^7.3.7"
+  },
+  "overrides": {
+    "rollup": "^4.59.0",
+    "immutable": "^5.1.5"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }

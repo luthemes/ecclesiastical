@@ -14,6 +14,8 @@
  */
 namespace Ecclesiastical;
 
+use function Ecclesiastical\Vite\asset;
+
 /**
  * Enqueue Scripts and Styles
  *
@@ -35,7 +37,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	 * Rather than enqueue the main stylesheet, we are going to enqueue sceen.css since all of the styles will
 	 * go here. We only need parse the information for the Theme in style.css so that it can be activated.
 	 */
-	wp_enqueue_style( 'ecclesiastical-screen', get_parent_theme_file_uri( 'public/assets/css/screen.css' ), array(), '1.0.0' );
+	wp_enqueue_style( 'ecclesiastical-screen', asset( 'resources/scss/screen.scss' ), array(), null );
 
 	/**
 	 * This allows users to comment by clicking on reply so that it gets nested.

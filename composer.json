@@ -21,6 +21,7 @@
             "Ecclesiastical\\": "app/"
         },
         "files": [
+            "app/Vite/functions-vite.php",
             "app/framework.php",
             "app/functions-comments.php",
             "app/functions-display.php",
