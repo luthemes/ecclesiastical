@@ -18,7 +18,9 @@
             justify-self: end;
             text-align: right;
 
-            .menu__items {
+            .menu__items,
+            .menu__items ul,
+            .menu__items li {
                 list-style: none;
                 margin: 0;
                 padding: 0;

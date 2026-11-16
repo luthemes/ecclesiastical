@@ -8,6 +8,11 @@
 //
 
 .primary-menu {
+    ul,
+    li {
+        list-style: none;
+    }
+
 	display: block;
     margin: 0;
 
