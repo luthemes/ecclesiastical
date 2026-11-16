@@ -8,18 +8,40 @@
 //
 
 .secondary-menu {
-    clear: both;
-    content: "";
-    display: table;
     font-size: 0.975rem;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
+    text-align: center;
 
-    .menu__items {
-        list-style-type: none;
+    .menu__items,
+    .menu__items > ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-        .menu__item {
-            float: left;
-            padding: 0 0.6rem 1rem 0 ;
+    .menu__item,
+    .menu__items li {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        border-bottom: 0.063em solid transparent;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            border-bottom-color: currentColor;
         }
+    }
+
+    .menu__item--current > a,
+    .current_page_item > a {
+        border-bottom-color: currentColor;
+        font-weight: 700;
     }
 }
