@@ -183,7 +183,7 @@ class OptionsPage implements Bootable {
 	<?php }
 
 	public function admin_styles() {
-		wp_enqueue_style( 'ecclesiastical-admin-styles', get_parent_theme_file_uri( 'public/assets/css/admin.css' ), [], '1.0.0' );
+		wp_enqueue_style( 'ecclesiastical-admin-styles', \Ecclesiastical\Vite\asset( 'resources/scss/admin.scss' ), [], null );
 	}
 
 	/**

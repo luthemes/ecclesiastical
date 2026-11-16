@@ -43,10 +43,12 @@ class Component implements Bootable {
 	 * @return void
 	 */
 	public function enqueue(): void {
-		wp_enqueue_script( 'ecclesiastical-navigation', get_theme_file_uri( 'public/assets/js/app.js' ), [ 'jquery' ], '1.0.0', true );
+		wp_enqueue_script( 'ecclesiastical-navigation', \Ecclesiastical\Vite\asset( 'resources/js/app.js' ), [ 'jquery' ], null, true );
 		wp_localize_script( 'ecclesiastical-navigation', 'ecclesiasticalScreenReaderText', [
-			'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'ecclesiastical' ) . '</span>',
-			'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'ecclesiastical' ) . '</span>',
+			'expandMain'    => esc_html__( 'Open the main menu', 'ecclesiastical' ),
+			'collapseMain'  => esc_html__( 'Close the main menu', 'ecclesiastical' ),
+			'expandChild'   => esc_html__( 'expand child menu', 'ecclesiastical' ),
+			'collapseChild' => esc_html__( 'collapse child menu', 'ecclesiastical' ),
 		] );
 	}
 

@@ -26,6 +26,7 @@ $ecclesiastical->provider( Ecclesiastical\Customize\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Menu\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Settings\Provider::class );
 $ecclesiastical->provider( Ecclesiastical\Sidebar\Provider::class );
+$ecclesiastical->provider( Ecclesiastical\Vite\Provider::class );
 
 /**
  * Allow child themes and plugins to add their own providers.

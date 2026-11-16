@@ -40,7 +40,7 @@ class Plugin {
             )
         );
 
-        if ( ! is_wp_error( $api ) ) {
+        if ( is_object( $api ) && ! is_wp_error( $api ) ) {
             $this->label = $api->name;
             if ( isset( $api->download_link ) ) {
                 $this->download_url = $api->download_link;

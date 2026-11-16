@@ -45,8 +45,7 @@ class ImageRadio extends WP_Customize_Control {
 	 * @return void
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'ecclesiastical-image-radio-css', get_theme_file_uri( 'public/assets/css/customize.css' ), array(), $this::$version );
-		wp_enqueue_script( 'ecclesiastical-image-radio-js', get_theme_file_uri( 'public/assets/js/customize.js' ), array( 'jquery' ), $this::$version, true );
+		wp_enqueue_style( 'ecclesiastical-image-radio-css', \Ecclesiastical\Vite\asset( 'resources/scss/customize.scss' ), array(), null );
 	}
 
     /**
