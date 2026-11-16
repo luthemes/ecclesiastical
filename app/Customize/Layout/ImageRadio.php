@@ -12,7 +12,7 @@
 /**
  * Define namespace
  */
-namespace Ecclesiastical\Customize\Layouts\Control;
+namespace Ecclesiastical\Customize\Layout;
 use WP_Customize_Control;
 
 /**

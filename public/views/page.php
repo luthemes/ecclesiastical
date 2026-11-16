@@ -12,7 +12,7 @@
 <?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
-		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
+		<div id="layout" class="<?php echo esc_attr( Ecclesiastical\Tools\Mod::get( 'global_layout' ) ); ?>">
 			<main id="main" class="content-area">
 				<?php 
 					while ( have_posts() ) : the_post();

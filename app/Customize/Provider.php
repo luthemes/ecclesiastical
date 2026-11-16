@@ -1,6 +1,6 @@
 <?php
 /**
- * Service provider ( app/Customize/Layouts/Provider.php )
+ * Customize provider ( app/Customize/Provider.php )
  *
  * @package   Ecclesiastical
  * @author    Benjamin Lu ( benlumia007@gmail.com )
@@ -9,19 +9,28 @@
  * @link      https://luthemes.com/portfolio/ecclesiastical
  */
 
-namespace Ecclesiastical\Customize\Layouts;
+namespace Ecclesiastical\Customize;
 
 use Backdrop\Core\ServiceProvider;
+use Backdrop\Customize\Component;
 
 class Provider extends ServiceProvider {
 
 	/**
-	 * Binds a single instance of the component to the container.
+	 * Binds the Backdrop customize component with the theme's customizer parts.
 	 *
 	 * @return void
 	 */
 	public function register(): void {
-		$this->app->singleton( Component::class );
+
+		$this->app->singleton( Component::class, function() {
+
+			return new Component( [
+				Layout\Customize::class,
+				FeatureImage\Customize::class,
+				Footer\Customize::class,
+			] );
+		} );
 	}
 
 	/**

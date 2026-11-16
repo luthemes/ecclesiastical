@@ -20,7 +20,7 @@
 	</header>
     <?php if ( has_post_thumbnail() ) { ?>
         <picture class="post-thumbnail">
-            <?php the_post_thumbnail( 'ecclesiastical-medium-thumbnails' ); ?>
+            <?php the_post_thumbnail( Ecclesiastical\Tools\Mod::get( 'theme_content_feature_image' ) ); ?>
         </picture>
     <?php } ?>
 	<div class="entry-excerpt">

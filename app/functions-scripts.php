@@ -59,3 +59,26 @@ add_action( 'wp_enqueue_scripts', function() {
 	";
 	wp_add_inline_style( 'ecclesiastical-screen', $custom_css );
 } );
+
+/**
+ * Hide customizer controls whose active callback is false.
+ *
+ * The customizer applies a control's starting active state before the control is in the page, so a control that is
+ * inactive when the customizer loads stays visible until its state changes. Mark inactive controls with a class and
+ * keep it in step with the active state.
+ */
+add_action( 'customize_controls_enqueue_scripts', function() {
+	wp_add_inline_style( 'customize-controls', 'li.customize-control.ecclesiastical-control-inactive { display: none !important; }' );
+
+	wp_add_inline_script( 'customize-controls', "wp.customize.bind( 'ready', function() {
+		var watch = function( control ) {
+			var sync = function( active ) {
+				control.container.toggleClass( 'ecclesiastical-control-inactive', ! active );
+			};
+			sync( control.active() );
+			control.active.bind( sync );
+		};
+		wp.customize.control.each( watch );
+		wp.customize.control.bind( 'add', watch );
+	} );" );
+} );
