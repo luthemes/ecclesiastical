@@ -35,6 +35,7 @@ function display_comment( $comment, $args, $depth ) { ?>
 								printf( esc_html__( '%1$s at %2$s', 'ecclesiastical' ), esc_html( get_comment_date() ), esc_html( get_comment_time() ) );
 							?>
 						</a>
+						<span class="comment__sep" aria-hidden="true">&middot;</span>
 						<span class="comment__reply">
 							<?php
 								comment_reply_link( array_merge( $args, [
