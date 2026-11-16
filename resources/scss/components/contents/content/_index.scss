@@ -18,10 +18,14 @@
         }
     }
     
+    // Backdrop's post_class() outputs `entry entry-type-{post type}` and `is-sticky`, so these
+    // target those classes. `.post` and `.sticky` still cover the 404 template.
+    .entry-type-post,
     .post {
         margin-bottom: 1.125rem;
         padding: 1.125rem 0;
 
+        &.is-sticky,
         &.sticky {
             background: #eeeeee;
             padding: 1.125rem;
@@ -60,6 +64,7 @@
         }
     }
 
+    .entry-type-page,
     .page {
         padding: 1.125rem 0;
 
